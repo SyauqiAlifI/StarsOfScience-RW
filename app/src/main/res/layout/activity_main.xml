@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:paddingStart="16dp"
+      android:paddingTop="@dimen/profile_card_height"
+      android:paddingEnd="16dp"
+      android:paddingBottom="@dimen/profile_card_height">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Born"
+            android:textStyle="bold" />
+
+          <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c. 780" />
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Died"
+            android:textStyle="bold" />
+
+          <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c. 850" />
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#D9D9D9" />
+
+      <TextView
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About" />
+
+      <TextView
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about" />
+    </LinearLayout>
+  </ScrollView>
+
+  <FrameLayout
+      android:id="@+id/profileCardContainer"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/profile_card_height" />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/profileCardContainer"
+    android:layout_marginBottom="@dimen/title_bottom_margin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+      style="@style/TextAppearance.AppCompat.Display1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Al-Khwarizmi"
+      android:textColor="#F5F5F5" />
+
+    <TextView
+      style="@style/TextAppearance.AppCompat.Title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Mathematician and Astronomer"
+      android:textColor="#E0E0E0" />
+
+  </LinearLayout>
+
+  <com.raywenderlich.android.starsofscience.view.CircularImageView
+    android:layout_width="@dimen/avatar_size"
+    android:layout_height="@dimen/avatar_size"
+    android:layout_alignBottom="@id/profileCardContainer"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/al_khwarizmi" />
+</RelativeLayout>
